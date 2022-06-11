@@ -1,0 +1,31 @@
+import java.util.Arrays;
+
+public class Selectionsort {
+
+     static void selectionsort()
+     {
+            int arr[]=new int[]{350,32,40,22,11,10,8,5};
+           
+      for(int i=0;i<arr.length;i++){
+       int min=i;
+       for(int j=i+1;j<arr.length;j++){
+          if(arr[j]<arr[min]){
+            min=j;
+          }
+       
+       }
+       int temp=arr[min];
+       arr[min]=arr[i];
+       arr[i]=temp;
+      
+      }
+         System.out.println(Arrays.toString(arr));
+     
+     }
+    
+    
+    public static void main(String[] args) {
+           selectionsort();
+    }
+    
+}
